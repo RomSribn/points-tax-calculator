@@ -1,0 +1,136 @@
+{
+  "plugins": [
+    "react",
+    "react-hooks",
+    "import",
+    "@typescript-eslint",
+    "sonarjs"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended", // uses typescript-specific linting rules
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended", // uses react-specific linting rules
+    "plugin:react/recommended", // uses react-specific linting rules
+    "plugin:sonarjs/recommended"
+  ],
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "tsconfigRootDir": ".",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      },
+      "babel-module": {
+        "alias": {
+          "@assets/*": [
+            "./src/assets/*"
+          ],
+          "@components/*": [
+            "./src/components/*"
+          ],
+           "@context/*": [
+            "./src/context/*"
+          ],
+          "@forms/*": [
+            "./src/forms/*"
+          ],
+          "@pages/*": [
+            "./src/pages/*"
+          ],
+          "@redux/*": [
+            "./src/redux/*"
+          ],
+          "@router/*": [
+            "./src/router/*"
+          ],
+          "@services/*": [
+            "./src/services/*"
+          ],
+          "@styles/*": [
+            "./src/styles/*"
+          ],
+          "@utils/*": [
+            "./src/utils/*"
+          ]
+        }
+      }
+    }
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "document": true,
+    "foo": true,
+    "JSX": true,
+    "Map": true,
+    "Promise": true,
+    "Set": true,
+    "SharedArrayBuffer": "readonly",
+    "window": true
+  },
+  "overrides": [{
+    "files": [
+      "*.ts",
+      "*.tsx"
+    ], // Your TypeScript files extension
+    "parserOptions": {
+      "project": [
+        "tsconfig.json",
+        "custom.d.ts"
+      ] // Specify it only for TypeScript files
+    }
+  }],
+   "rules": {
+    "prettier/prettier": [
+      "error",
+      {},
+      {
+        "usePrettierrc": true
+      }
+    ],
+    "comma-dangle": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jest/no-done-callback": "off",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "react/display-name": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": 0,
+    "no-empty-pattern": 0,
+    "no-unused-vars": 0,
+    "import/no-unresolved": 0,
+    "import/named": "error",
+    "import/namespace": "error",
+    "import/default": "error",
+    "import/export": "error",
+    "import/order": ["error", {
+      "groups": [
+        ["builtin", "external", "internal"],
+        ["parent", "sibling"], "index"
+      ],
+      "newlines-between": "always"
+    }],
+    "react/no-unescaped-entities": 0
+  }
+}

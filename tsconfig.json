@@ -1,0 +1,60 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    /* Base directory to resolve non-absolute module names. */
+    "target": "es5",
+    /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'. */
+    "forceConsistentCasingInFileNames": true,
+    /* TypeScript will issue an error if a program tries to include a file by a casing different from the casing on disk. */
+    "resolveJsonModule": true,
+    /* Allows importing modules with a ‘.json’ extension, which is a common practice in node projects. */
+    "noImplicitAny": false,
+    /* Raise error on expressions and declarations with an implied 'any' type. */
+    "module": "esnext",
+    /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    "lib": [ /* Specify library files to be included in the compilation. */
+      "es2017",
+      "esnext",
+      "DOM"
+    ],
+    "allowJs": true,
+    /* Allow javascript files to be compiled. */
+    "jsx": "react-native",
+    /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+    "noEmit": true,
+    /* Do not emit outputs. */
+    "isolatedModules": true,
+    /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
+    "strict": true,
+    /* Strict Type-Checking Options */
+    "moduleResolution": "node",
+    /* Module Resolution Options */
+    "paths": {
+      /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+      "*": ["./*"],
+      "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"],
+      "@context/*": ["./src/context/*"],
+      "@forms/*": ["./src/forms/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@redux/*": ["./src/redux/*"],
+      "@router/*": ["./src/router/*"],
+      "@services/*": ["./src/services/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@utils/*": ["./src/utils/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
+    "esModuleInterop": true,
+    /* TypeScript doesn't treats CommonJS/AMD/UMD modules similar to ES6 modules. */
+    "skipLibCheck": false, /* Skip type checking of declaration files. */
+    "downlevelIteration": true
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "config-overrides.js"
+  ]
+}

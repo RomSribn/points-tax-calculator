@@ -1,0 +1,44 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "safari >= 7"
+          ]
+        }
+      }
+    ],
+    "@babel/react",
+    "@babel/typescript"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "extensions": [
+          ".js",
+          "jsx",
+          "ts",
+          "tsx",
+          ".json"
+        ],
+        "alias": {
+          "src": "./src",
+          "@assets": "./src/assets",
+          "@components": "./src/components",
+          "@context": "./src/context",
+          "@forms": "./src/forms",
+          "@pages": "./src/pages",
+          "@redux": "./src/redux",
+          "@router": "./src/router",
+          "@services": "./src/services",
+          "@styles": "./src/styles",
+          "@utils": "./src/utils"
+        }
+      }
+    ]
+  ]
+}

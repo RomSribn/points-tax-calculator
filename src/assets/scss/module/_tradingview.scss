@@ -1,0 +1,79 @@
+.main-chart {
+  height: 550px;
+}
+
+.technical-analysis .tradingview-widget-container {
+  margin-bottom: 30px;
+}
+
+.symbol-info .tradingview-widget-container {
+  margin-bottom: 15px;
+}
+
+.markets-overview .tradingview-widget-container {
+  margin-bottom: 30px;
+}
+
+.chart {
+  display: flex;
+  border: 1px solid;
+  height: 100%;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .smpa_bias_tfs {
+    display: block;
+    width: max-content;
+    height: 100%;
+    overflow: auto;
+
+    .smpa_bias_beheader {
+      text-align: center;
+      background: lightgrey;
+      font-size: small;
+    }
+
+    .smpa_bias_buheader {
+      text-align: center;
+      background: #0ACC3B37;
+      font-size: small;
+    }
+
+    .smpa_bias_scope {
+      text-align: left;
+      background: #F0F0F0;
+      font-size: small;
+    }
+
+    .smpa_bias_msg {
+      text-align: left;
+      background: #F8F8F8;
+      font-size: small;
+    }
+  }
+}
+
+.tfs-select {
+  width: auto;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+
+  .select__options {
+    bottom: auto;
+  }
+
+  .form-control.custom-select {
+    font-weight: normal;
+    background-color: transparent;
+  }
+}
