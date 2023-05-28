@@ -13,8 +13,12 @@ const Header: React.FC = () => {
               <Dropdown className="header-custom-icon">
                 <ThemeConsumer>
                   {({ theme, updateTheme }) => (
-                    <Button variant="default" onClick={updateTheme} id="darkTheme">
-                      {theme === 'light' ? <img src="/img/icon/moon.svg" /> : <img src="/img/icon/sunny.svg" />}
+                    <Button variant="default" onClick={updateTheme} data-testid="darkTheme">
+                      {theme === 'light' ? (
+                        <img data-testid="moon-icon" src="/img/icon/moon.svg" />
+                      ) : (
+                        <img data-testid="sunny-icon" src="/img/icon/sunny.svg" />
+                      )}
                     </Button>
                   )}
                 </ThemeConsumer>

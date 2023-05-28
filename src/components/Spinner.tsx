@@ -7,7 +7,9 @@ interface ISpinner {
 }
 
 const Spinner: React.FC<ISpinner> = ({ className }) => (
-  <div className={classNames('d-flex align-items-center justify-content-center', className)}>
+  <div
+    className={classNames('d-flex align-items-center justify-content-center', className)}
+    data-testid="spinner-container">
     <BootstrapSpinner animation="border" variant="primary" />
   </div>
 );

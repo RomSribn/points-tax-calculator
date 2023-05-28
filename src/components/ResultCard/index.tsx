@@ -2,7 +2,7 @@ import React from 'react';
 import { TYear } from '@utils/interfaces';
 import { getCurrencyAmount } from '@utils/helpers';
 
-interface IResultCard {
+export interface IResultCard {
   income: number;
   tax: number;
   year: TYear;

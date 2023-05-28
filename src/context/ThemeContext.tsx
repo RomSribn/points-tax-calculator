@@ -14,4 +14,4 @@ const ThemeContext: React.Context<TodoContextType> = React.createContext(default
 const ThemeProvider = ThemeContext.Provider;
 const ThemeConsumer = ThemeContext.Consumer;
 
-export { ThemeContext, ThemeProvider, ThemeConsumer };
+export { ThemeContext, ThemeProvider, ThemeConsumer, defaultState };
