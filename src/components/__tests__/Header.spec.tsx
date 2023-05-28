@@ -1,6 +1,6 @@
 import React from 'react';
 import userEvent from '@testing-library/user-event';
-import { customRender, screen } from '@utils/test-utils';
+import { customRender, screen } from 'src/utils/tests/test-utils';
 import { Header } from '@components/index';
 import { ThemeProvider } from '@context/ThemeContext';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { customRender, screen } from '@utils/test-utils';
+import { customRender, screen } from 'src/utils/tests/test-utils';
 import { ThemeProvider } from '@context/ThemeContext';
 import { Layout } from '@components/index';
 

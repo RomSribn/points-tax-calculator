@@ -43,7 +43,7 @@ const TaxesForm: React.FC = () => {
   }, [data, dispatch, income, isFetching, year]);
 
   return (
-    <div className="form-access my-auto">
+    <div className="form-access my-auto" data-testid="taxes-form">
       <form onSubmit={onSubmit}>
         <span>Tax calculate</span>
 

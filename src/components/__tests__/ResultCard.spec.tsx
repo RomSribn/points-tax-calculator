@@ -1,5 +1,5 @@
 import React from 'react';
-import { customRender, screen } from '@utils/test-utils';
+import { customRender, screen } from 'src/utils/tests/test-utils';
 import { getCurrencyAmount } from '@utils/helpers';
 import ResultCard, { IResultCard } from '@components/ResultCard';
 

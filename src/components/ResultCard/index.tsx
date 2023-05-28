@@ -11,7 +11,7 @@ export interface IResultCard {
 
 const ResultCard: React.FC<IResultCard> = ({ income, tax, year, result }) => {
   return (
-    <div className="card">
+    <div className="card" data-testid="result-card">
       <div className="card-body">
         <h5 className="card-title">Result</h5>
         <div className="settings-notification">
