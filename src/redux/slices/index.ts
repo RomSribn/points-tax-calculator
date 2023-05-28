@@ -1,1 +1,1 @@
-export { appSlice, setYear } from './appSlice';
+export { appSlice, setYear, setIncome, setResult } from './appSlice';

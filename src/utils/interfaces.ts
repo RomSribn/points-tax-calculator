@@ -12,4 +12,4 @@ interface ITaxesResponse {
 }
 
 export type { ITaxesResponse }; // Interfaces
-export type { TYear, TTheme }; // Types
+export type { TYear, TTheme, TTaxBracket }; // Types
