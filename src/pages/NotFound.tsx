@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Notfound: React.FC = () => {
+const NotFound: React.FC = () => {
   return (
     <div className="error-page vh-100 d-flex justify-content-center text-center">
       <div className="my-auto">
@@ -15,4 +15,4 @@ const Notfound: React.FC = () => {
   );
 };
 
-export default Notfound;
+export default NotFound;

@@ -13,22 +13,31 @@ const Home: React.FC = () => {
       <ResultCard income={income} year={year} result={result} tax={currentBracket.rate * 100} />
     </div>
   );
+
   const renderTaxesForm = isLoading ? (
-    <Spinner />
+    <div data-testid="taxes-form-spinner">
+      <Spinner />
+    </div>
   ) : (
     <div className="mb-5">
       <TaxesForm />
     </div>
   );
 
+  const renderResultSpinner = isFetching && !isLoading && (
+    <div data-testid="result-spinner" className="col-md-6 d-flex align-items-center justify-content-center">
+      <Spinner />
+    </div>
+  );
+
   return (
-    <div className="vh-100 d-flex align-items-center">
+    <div className="vh-100 d-flex align-items-center" data-testid="home-page">
       <div className="container">
         <div className="row d-flex justify-content-center">
           <div className="col-md-4">{renderTaxesForm}</div>
 
           {renderResultCard}
-          {isFetching && !isLoading && <Spinner className="col-md-6" />}
+          {renderResultSpinner}
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Notfound } from '@pages/index';
+import { Home, NotFound } from '@pages/index';
 
 export interface IRoute {
   path?: string;
@@ -13,5 +13,5 @@ export enum RouteNames {
 
 export const publicRoutes: IRoute[] = [
   { path: RouteNames.HOME, exact: true, component: Home },
-  { component: Notfound }
+  { component: NotFound }
 ];
