@@ -4,12 +4,12 @@ import { renderWithRouter, screen } from '@utils/tests';
 import { NotFound } from '@pages/index';
 
 describe('Notfound component', () => {
-  test('Should renders the error message and link', () => {
+  test('Should renders page with the error message and link', () => {
     renderWithRouter(<NotFound />);
-    // Assert that the link is rendered
+
     const linkElement = screen.getByText(/back to home/i);
 
-    // Assert that the error message is rendered
+    expect(screen.getByTestId('error-page')).toBeInTheDocument();
     expect(screen.getByText(/oops something went wrong/i)).toBeInTheDocument();
     expect(linkElement).toBeInTheDocument();
     expect(linkElement.getAttribute('href')).toBe('/');
