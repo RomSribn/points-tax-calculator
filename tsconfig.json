@@ -56,6 +56,7 @@
   "exclude": [
     "node_modules",
     "config-overrides.js",
-    "jest.config.js"
+    "jest.config.js",
+    "commitlint.config.js"
   ]
 }
