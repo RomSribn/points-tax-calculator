@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput component renders input and error message elements 1`] = `
+<div
+  aria-live="polite"
+  class="custom-class"
+  data-testid="form-input"
+>
+  <div
+    class="form-group"
+  >
+    <input
+      aria-invalid="true"
+      aria-label="Input Label"
+      class="form-control transition-colors focus:outline-none focus:ring-2 focus:ring-opacity-50 border-red-600 hover:border-red-600 focus:border-red-600 focus:ring-red-600"
+      id="input-id"
+      name="input-name"
+      placeholder="Enter a value"
+      type="text"
+    />
+  </div>
+  <p
+    class="font-serif text-sm text-left block text-red-600 mt-1 text-danger"
+    data-testid="error-message"
+  >
+    Input is required
+  </p>
+</div>
+`;

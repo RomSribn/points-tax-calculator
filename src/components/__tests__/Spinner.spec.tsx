@@ -3,7 +3,7 @@ import { customRender, screen } from 'src/utils/tests/test-utils';
 import { Spinner } from '@components/index';
 
 describe('Spinner', () => {
-  test('renders the Spinner component with the correct class', () => {
+  test('Should renders the Spinner component with the correct class', () => {
     const className = 'custom-spinner';
 
     const wrapper = customRender(<Spinner className={className} />);

@@ -1,29 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Spinner Should renders the Spinner component with the correct class 1`] = `
+exports[`ErrorMessage Should renders the ErrorMessage component with the correct class and children 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="d-flex align-items-center justify-content-center custom-spinner"
-        data-testid="spinner-container"
+      <p
+        class="font-serif text-sm text-left block text-red-600 custom-spinner"
+        data-testid="error-message"
       >
-        <div
-          class="spinner-border text-primary"
-        />
-      </div>
+        <span>
+          children
+        </span>
+      </p>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="d-flex align-items-center justify-content-center custom-spinner"
-      data-testid="spinner-container"
+    <p
+      class="font-serif text-sm text-left block text-red-600 custom-spinner"
+      data-testid="error-message"
     >
-      <div
-        class="spinner-border text-primary"
-      />
-    </div>
+      <span>
+        children
+      </span>
+    </p>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Should renders input element with correct attributes 1`] = `
+<input
+  aria-label="Input Label"
+  class="form-control custom-class"
+  data-testid="input-element"
+  id="input-id"
+  name="input-name"
+  placeholder="Enter a value"
+  type="text"
+/>
+`;

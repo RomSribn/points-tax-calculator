@@ -6,7 +6,7 @@ import { ErrorMessage } from '@hookform/error-message';
 
 import { Input, InputProps, ErrorMessage as FormErrorMessage } from '../_elements';
 
-type FormInputProps<TFormValues extends FieldValues> = {
+export type FormInputProps<TFormValues extends FieldValues> = {
   name: Path<TFormValues>;
   register?: UseFormRegister<TFormValues>;
   errors?: Partial<DeepMap<TFormValues, FieldError>>;
@@ -24,7 +24,7 @@ const FormInput = <TFormValues extends Record<string, unknown>>({
   const hasError = !!(errors && errorMessages);
 
   return (
-    <div className={classNames('', className)} aria-live="polite">
+    <div className={classNames(className)} aria-live="polite" data-testid="form-input">
       <Input
         name={name}
         aria-invalid={hasError}

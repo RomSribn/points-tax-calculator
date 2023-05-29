@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { taxesService } from 'src/services/taxesService';
+import { taxesService } from '@services/taxesService';
 import { FormInput } from '@forms/controls';
 import { setYear, setIncome, setResult } from '@redux/slices';
 import { useDispatch } from 'react-redux';
