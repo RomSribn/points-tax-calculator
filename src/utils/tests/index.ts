@@ -1,2 +1,2 @@
 export * from './test-utils';
-export { renderWithRouter } from './helper';
+export { renderWithRouter, LocalStorageMock } from './helper';
