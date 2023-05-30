@@ -3,12 +3,31 @@ import { TYear } from '@utils/interfaces';
 import { getCurrencyAmount } from '@utils/helpers';
 
 export interface IResultCard {
+  /**
+   * salary income amount
+   */
   income: number;
+  /**
+   * current tax percentage number
+   */
   tax: number;
+  /**
+   * current taxable year
+   */
   year: TYear;
+  /**
+   * NET income amount
+   */
   result: number;
 }
-
+/**
+ * ResultCard component with the calculated result.
+ * @param {ISpinner['income']} income salary income amount.
+ * @param {ISpinner['tax']} tax current tax percentage number.
+ * @param {ISpinner['year']} year current taxable number.
+ * @param {ISpinner['result']} result NET income amount.
+ * @returns {React.FC<IResultCard>}
+ */
 const ResultCard: React.FC<IResultCard> = ({ income, tax, year, result }) => {
   return (
     <div className="card" data-testid="result-card">
