@@ -2,9 +2,21 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TYear, TTaxBracket, ITaxesResponse } from '@utils/interfaces';
 
 interface IState {
+  /**
+   * current taxable year
+   */
   year: TYear;
+  /**
+   * salary income amount
+   */
   income: number;
+  /**
+   * NET income amount
+   */
   result: number | null;
+  /**
+   * current tax bracket object.
+   */
   currentBracket: TTaxBracket | null;
 }
 const initialState: IState = {
@@ -13,7 +25,9 @@ const initialState: IState = {
   result: null,
   currentBracket: null
 };
-
+/**
+ * Main application data.
+ */
 export const appSlice = createSlice({
   name: 'app',
   initialState,

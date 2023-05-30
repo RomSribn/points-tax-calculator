@@ -3,7 +3,10 @@ import { TaxesForm } from '@forms/container/taxes';
 import { ResultCard, Spinner } from '@components/index';
 import { useTypedSelector } from '@utils/useTypedSelector';
 import { taxesService } from '@services/taxesService';
-
+/**
+ * Home page.
+ * @returns {React.FC} Page with Taxes form and ResultCard.
+ */
 const Home: React.FC = () => {
   const { income, currentBracket, year, result } = useTypedSelector((state) => state.app);
   const { isFetching, isLoading } = taxesService.useGetTaxesBracketsQuery(year);
