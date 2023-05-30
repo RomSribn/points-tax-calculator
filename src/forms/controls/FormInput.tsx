@@ -7,11 +7,24 @@ import { ErrorMessage } from '@hookform/error-message';
 import { Input, InputProps, ErrorMessage as FormErrorMessage } from '../_elements';
 
 export type FormInputProps<TFormValues extends FieldValues> = {
+  /**
+   * input and error name
+   */
   name: Path<TFormValues>;
+  /**
+   * react-hook-form registering control
+   */
   register?: UseFormRegister<TFormValues>;
+  /**
+   * errors object
+   */
   errors?: Partial<DeepMap<TFormValues, FieldError>>;
 } & Omit<InputProps, 'name'>;
-
+/**
+ *
+ * Form input control.
+ * @returns {<TFormValues extends Record<string, unknown>>} react-hook-form input implementation
+ */
 const FormInput = <TFormValues extends Record<string, unknown>>({
   name,
   register,

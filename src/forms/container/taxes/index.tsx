@@ -12,10 +12,20 @@ import { ErrorMessage } from '@forms/_elements/ErrorMessage';
 import { formSchema } from './validation';
 
 type TaxesFormFields = {
+  tax: number;
+  /**
+   * salary income amount
+   */
   income: number;
+  /**
+   * current taxable number
+   */
   year: TYear;
 };
-
+/**
+ * Taxes form with income and year inputs
+ * @returns {React.FC} react-hook-form form implementation.
+ */
 const TaxesForm: React.FC = () => {
   const {
     register,
